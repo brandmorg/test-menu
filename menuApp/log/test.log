@@ -358,3 +358,114 @@ MenuTest: test_1_-_Menu_Has_Name
   [1m[36mMenu Create (0.3ms)[0m  [1m[32mINSERT INTO "menus" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "testMenu"], ["created_at", "2023-06-02 04:06:19.060299"], ["updated_at", "2023-06-02 04:06:19.060299"]]
   [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------
+MenuTest: test_1_-_Menu_Has_Name
+--------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMenu Create (0.4ms)[0m  [1m[32mINSERT INTO "menus" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "testMenu"], ["created_at", "2023-06-02 04:10:36.480396"], ["updated_at", "2023-06-02 04:10:36.480396"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+MenuItemTest: test_1_-_Menu_Item_Has_Name
+-----------------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+MenuItemTest: test_2_-_MenuItems_Price_>_0
+------------------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMenu Create (0.3ms)[0m  [1m[32mINSERT INTO "menus" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "testMenu"], ["created_at", "2023-06-02 04:10:36.494479"], ["updated_at", "2023-06-02 04:10:36.494479"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+MenuItemTest: test_1_-_Menu_Item_Has_Name
+-----------------------------------------
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMenuItem Create (0.4ms)[0m  [1m[32mINSERT INTO "menu_items" ("name", "description", "price", "menus_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "testBurger"], ["description", nil], ["price", 0.0], ["menus_id", nil], ["created_at", "2023-06-02 04:10:59.607756"], ["updated_at", "2023-06-02 04:10:59.607756"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+MenuItemTest: test_2_-_MenuItems_Price_>_0
+------------------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMenu Create (0.2ms)[0m  [1m[32mINSERT INTO "menus" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "testMenu"], ["created_at", "2023-06-02 04:10:59.615286"], ["updated_at", "2023-06-02 04:10:59.615286"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMenuItem Create (0.2ms)[0m  [1m[32mINSERT INTO "menu_items" ("name", "description", "price", "menus_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "testTaco"], ["description", nil], ["price", 4.5], ["menus_id", 1], ["created_at", "2023-06-02 04:10:59.617319"], ["updated_at", "2023-06-02 04:10:59.617319"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------
+MenuTest: test_1_-_Menu_Has_Name
+--------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMenu Create (0.3ms)[0m  [1m[32mINSERT INTO "menus" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "testMenu"], ["created_at", "2023-06-02 04:10:59.620366"], ["updated_at", "2023-06-02 04:10:59.620366"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------
+MenuTest: test_1_-_Menu_Has_Name
+--------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMenu Create (0.4ms)[0m  [1m[32mINSERT INTO "menus" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "testMenu"], ["created_at", "2023-06-02 04:13:13.964182"], ["updated_at", "2023-06-02 04:13:13.964182"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+MenuItemTest: test_2_-_MenuItems_Price_>_0
+------------------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMenuItem Create (0.3ms)[0m  [1m[32mINSERT INTO "menu_items" ("name", "description", "price", "menus_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "testTaco"], ["description", nil], ["price", 4.5], ["menus_id", nil], ["created_at", "2023-06-02 04:13:13.974133"], ["updated_at", "2023-06-02 04:13:13.974133"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+MenuItemTest: test_1_-_Menu_Item_Has_Name
+-----------------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMenuItem Create (0.2ms)[0m  [1m[32mINSERT INTO "menu_items" ("name", "description", "price", "menus_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "testBurger"], ["description", nil], ["price", 0.0], ["menus_id", nil], ["created_at", "2023-06-02 04:13:13.975923"], ["updated_at", "2023-06-02 04:13:13.975923"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------
+MenuTest: test_1_-_Menu_Has_Name
+--------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMenu Create (0.4ms)[0m  [1m[32mINSERT INTO "menus" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "testMenu"], ["created_at", "2023-06-02 04:18:17.200364"], ["updated_at", "2023-06-02 04:18:17.200364"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+MenuItemTest: test_2_-_MenuItems_Price_>_0
+------------------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMenuItem Create (0.3ms)[0m  [1m[32mINSERT INTO "menu_items" ("name", "description", "price", "menus_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "testTaco"], ["description", nil], ["price", 4.5], ["menus_id", nil], ["created_at", "2023-06-02 04:18:17.210495"], ["updated_at", "2023-06-02 04:18:17.210495"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+MenuItemTest: test_1_-_Menu_Item_Has_Name
+-----------------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mMenuItem Create (0.4ms)[0m  [1m[32mINSERT INTO "menu_items" ("name", "description", "price", "menus_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "testBurger"], ["description", nil], ["price", 0.0], ["menus_id", nil], ["created_at", "2023-06-02 04:18:17.213224"], ["updated_at", "2023-06-02 04:18:17.213224"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------
+MenuItemTest: test_3_-_MenuItems_Price_<=_0_Return_Error
+--------------------------------------------------------
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
