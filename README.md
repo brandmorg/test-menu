@@ -1,5 +1,9 @@
 # test-menu
 
+run tests: 
+1. Navigate to menuApp root folder
+2. run `rake test TESTOPTS=-v;`
+
 ## References Used:
 https://guides.rubyonrails.org/active_record_migrations.html
 
